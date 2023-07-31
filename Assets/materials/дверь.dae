@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.0 commit date:2022-12-06, commit time:18:46, hash:a95bf1ac01be</authoring_tool>
+    </contributor>
+    <created>2023-07-30T14:42:49</created>
+    <modified>2023-07-30T14:42:49</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Материал_002-effect">
+      <profile_COMMON>
+        <newparam sid="Материал_002_Base_Color-surface">
+          <surface type="2D">
+            <init_from>Материал_002_Base_Color</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Материал_002_Base_Color-sampler">
+          <sampler2D>
+            <source>Материал_002_Base_Color-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Материал_002_Base_Color-sampler" texcoord="UVКарта"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Материал_001-effect">
+      <profile_COMMON>
+        <newparam sid="Материал_001_Base_Color-surface">
+          <surface type="2D">
+            <init_from>Материал_001_Base_Color</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Материал_001_Base_Color-sampler">
+          <sampler2D>
+            <source>Материал_001_Base_Color-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Материал_001_Base_Color-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_002-effect">
+      <profile_COMMON>
+        <newparam sid="Cube_Base_Color-surface">
+          <surface type="2D">
+            <init_from>Cube_Base_Color</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Cube_Base_Color-sampler">
+          <sampler2D>
+            <source>Cube_Base_Color-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Cube_Base_Color-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Cube_Base_Color" name="Cube_Base_Color">
+      <init_from>Cube%20Base%20Color.png</init_from>
+    </image>
+    <image id="Материал_001_Base_Color" name="Материал_001_Base_Color">
+      <init_from>%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB.001%20Base%20Color.png</init_from>
+    </image>
+    <image id="Материал_002_Base_Color" name="Материал_002_Base_Color">
+      <init_from>%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB.002%20Base%20Color.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Материал_002-material" name="Материал.002">
+      <instance_effect url="#Материал_002-effect"/>
+    </material>
+    <material id="Материал_001-material" name="Материал.001">
+      <instance_effect url="#Материал_001-effect"/>
+    </material>
+    <material id="Material_002-material" name="Material.002">
+      <instance_effect url="#Material_002-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Куб-mesh" name="Куб">
+      <mesh>
+        <source id="Куб-mesh-positions">
+          <float_array id="Куб-mesh-positions-array" count="24">0.5389851 0.8181695 1.322497 0.5389851 0.8181695 1.25796 0.1390432 0.8171208 1.322497 0.1390432 0.8171208 1.25796 0.5386517 0.9453335 1.322497 0.5386517 0.9453335 1.25796 0.1387097 0.9442848 1.322497 0.1387097 0.9442848 1.25796</float_array>
+          <technique_common>
+            <accessor source="#Куб-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Куб-mesh-normals">
+          <float_array id="Куб-mesh-normals-array" count="36">-0.002622067 0.9999966 0 0.9999966 0.002622067 0 0.002622067 -0.9999967 0 -0.9999966 -0.002622783 0 0 0 -1 0 0 1 -0.002622067 0.9999967 0 0.9999966 0.002621889 0 0.002622067 -0.9999967 0 -0.9999966 -0.002621889 0 0 0 -1 -1.28184e-7 0 1</float_array>
+          <technique_common>
+            <accessor source="#Куб-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Куб-mesh-map-0">
+          <float_array id="Куб-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.625 0.25 0.375 0.5 0.375 0.25 0.625 0.5 0.375 0.75 0.375 0.5 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.625 0.5 0.875 0.75 0.625 0.75 0.625 0 0.625 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.625 0.5 0.875 0.5 0.875 0.75</float_array>
+          <technique_common>
+            <accessor source="#Куб-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Куб-mesh-vertices">
+          <input semantic="POSITION" source="#Куб-mesh-positions"/>
+        </vertices>
+        <triangles material="Материал_002-material" count="12">
+          <input semantic="VERTEX" source="#Куб-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Куб-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Куб-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 3 1 3 6 1 4 2 1 5 7 2 6 4 2 7 6 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 7 5 15 1 5 16 5 5 17 1 6 18 3 6 19 2 6 20 3 7 21 7 7 22 6 7 23 7 8 24 5 8 25 4 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 7 11 33 3 11 34 1 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Cube-mesh" name="Cube">
+      <mesh>
+        <source id="Cube-mesh-positions">
+          <float_array id="Cube-mesh-positions-array" count="24">1 0.09351003 3.77569 1 0.09351003 -0.5554236 1 -0.09351003 3.77569 1 -0.09351003 -0.5554236 -1 0.09351003 3.77569 -1 0.09351003 -0.5554236 -1 -0.09351003 3.77569 -1 -0.09351003 -0.5554236</float_array>
+          <technique_common>
+            <accessor source="#Cube-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cube-mesh-normals">
+          <float_array id="Cube-mesh-normals-array" count="18">0 0 1 0 -1 0 -1 0 0 0 0 -1 1 0 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#Cube-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cube-mesh-map-0">
+          <float_array id="Cube-mesh-map-0-array" count="72">0.875 0.5 0.625 0.75 0.625 0.5 0.625 0.75 0.375 1 0.375 0.75 0.625 0 0.375 0.25 0.375 0 0.375 0.5 0.125 0.75 0.125 0.5 0.625 0.5 0.375 0.75 0.375 0.5 0.625 0.25 0.375 0.5 0.375 0.25 0.875 0.5 0.875 0.75 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.625 0 0.625 0.25 0.375 0.25 0.375 0.5 0.375 0.75 0.125 0.75 0.625 0.5 0.625 0.75 0.375 0.75 0.625 0.25 0.625 0.5 0.375 0.5</float_array>
+          <technique_common>
+            <accessor source="#Cube-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cube-mesh-vertices">
+          <input semantic="POSITION" source="#Cube-mesh-positions"/>
+        </vertices>
+        <triangles material="Материал_001-material" count="12">
+          <input semantic="VERTEX" source="#Cube-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube-mesh-map-0" offset="2" set="0"/>
+          <p>4 0 0 2 0 1 0 0 2 2 1 3 7 1 4 3 1 5 6 2 6 5 2 7 7 2 8 1 3 9 7 3 10 5 3 11 0 4 12 3 4 13 1 4 14 4 5 15 1 5 16 5 5 17 4 0 18 6 0 19 2 0 20 2 1 21 6 1 22 7 1 23 6 2 24 4 2 25 5 2 26 1 3 27 3 3 28 7 3 29 0 4 30 2 4 31 3 4 32 4 5 33 0 5 34 1 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Куб" name="Куб" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 -1.02812 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Куб-mesh" name="Куб">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Материал_002-material" target="#Материал_002-material">
+                <bind_vertex_input semantic="UVКарта" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Cube" name="Cube" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Cube-mesh" name="Cube">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Материал_001-material" target="#Материал_001-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_002-material" target="#Material_002-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
